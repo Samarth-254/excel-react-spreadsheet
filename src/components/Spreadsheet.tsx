@@ -16,7 +16,7 @@ const columnHelper = createColumnHelper<JobRequest>();
 
 const StatusBadge: React.FC<{ status: JobRequest['status'] }> = ({ status }) => {
   // Return empty div for empty status
-  if (!status || status === '') {
+  if (!status || status.length === 0) {
     return <div></div>;
   }
 
@@ -93,7 +93,7 @@ const StatusBadge: React.FC<{ status: JobRequest['status'] }> = ({ status }) => 
 
 const PriorityBadge: React.FC<{ priority: JobRequest['priority'] }> = ({ priority }) => {
   // Return empty div for empty priority
-  if (!priority || priority === '') {
+  if (!priority || priority.length === 0) {
     return <div></div>;
   }
 
